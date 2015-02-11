@@ -4,17 +4,26 @@ import java.util.ArrayList;
 public class Human {
 	private Dog dog;
 	private String name;
+	private String error;
 	
 	public Human (String name){
-		this.name = name;
+		if (name.length() > 2){
+			this.name = name;
+		} else {
+			error = "Ägarens namn måste vara minst 3 bokstäver långt.";
+		}
 	}
 	
 	public String getName(){
 		return name;
 	}
 	
-	public void buyDog(Dog newDog){
-		newDog = new Dog(newDog.getName());
+	public String getError(){
+		return this.error;
+	}
+	
+	public Dog buyDog(Dog newDog){
+		return this.dog = dog;
 	}
 	
 	/** 
@@ -22,8 +31,11 @@ public class Human {
 	 * @return
 	 */
 	public String getInfo(){
-		String s;
-		s = this.getName() + " äger en hund som heter " + dog.getName();
-		return s;
+			if(dog != null){
+				return getName() + " äger en hund som heter " + dog.getName();
+			} else {
+				return getName() + " äger inte en hund";
+			}
+
 	}
 }

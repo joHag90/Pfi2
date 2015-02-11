@@ -24,6 +24,8 @@ public class HumanDogGUI extends JFrame {
 
 	Human human;
 	Dog dog;
+	boolean correctHumanName;
+	boolean correctDogName;
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -94,6 +96,12 @@ public class HumanDogGUI extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				human = new Human(textField.getText());
 				System.out.println("Människan " + human.getName() + " skapad");
+				correctHumanName = true;
+				
+				if (human.getError() != null){
+					textField_2.setText(human.getError());
+					correctHumanName = false;
+				}
 			}
 		});
 		btnNewButton.setBounds(239, 89, 117, 29);
@@ -102,9 +110,20 @@ public class HumanDogGUI extends JFrame {
 		JButton btnNewButton_1 = new JButton("Buy Dog");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				human.buyDog(dog = new Dog(textField_1.getText()));
-				System.out.println("Hunden " + dog.getName() + " köpt av " + human.getName());
-			}
+				try {
+					human.buyDog(dog = new Dog(textField_1.getText()));
+					System.out.println("Hunden " + dog.getName() + " köpt av " + human.getName());
+					correctDogName = true;
+					
+					if (dog.getError() != null){
+						textField_2.setText("Hundens namn måste vara längre än 3 bokstäver");
+						correctDogName = false;
+					}
+					}
+				catch (NullPointerException g){
+					textField_2.setText("Hunden måste ha ett namn och en ägare");
+				}
+				}
 		});
 		btnNewButton_1.setBounds(239, 142, 117, 29);
 		contentPane.add(btnNewButton_1);
@@ -112,12 +131,37 @@ public class HumanDogGUI extends JFrame {
 		JButton btnNewButton_2 = new JButton("Print Info");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				textField_3.setText(human.getInfo());
-				
-			}
+				textField_2.setText(null);
+				textField_3.setText(null);
+				try {
+					if (correctHumanName || correctDogName){
+						textField_3.setText(human.getInfo());
+					} else {
+						textField_2.setText("Ägaren och hunden måste ha ett namn");
+						correctHumanName = false;
+						correctDogName = false;
+					}
+				}
+				catch (NullPointerException f) {
+					textField_2.setText("Ägaren och hunden måste ha ett namn");
+				}
+				}
+			
 		});
 		btnNewButton_2.setBounds(239, 196, 117, 29);
 		contentPane.add(btnNewButton_2);
+		
+		JButton btnClear = new JButton("Clear");
+		btnClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dog = null;
+				human = null;
+				textField_2.setText(null);
+				textField_3.setText(null);
+			}
+		});
+		btnClear.setBounds(399, 142, 117, 29);
+		contentPane.add(btnClear);
 		
 	}
 }
