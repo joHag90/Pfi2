@@ -22,7 +22,7 @@ public class Human {
 		return this.error;
 	}
 	
-	public Dog buyDog(Dog newDog){
+	public Dog buyDog(Dog dog){
 		return this.dog = dog;
 	}
 	

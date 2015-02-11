@@ -111,7 +111,7 @@ public class HumanDogGUI extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					human.buyDog(dog = new Dog(textField_1.getText()));
+					dog = human.buyDog(new Dog(textField_1.getText()));
 					System.out.println("Hunden " + dog.getName() + " köpt av " + human.getName());
 					correctDogName = true;
 					
