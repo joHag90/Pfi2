@@ -13,7 +13,7 @@ Kommentarer
  I buyDog(Dog newDog) överför du inte det skapade objektets attribut till Dog dog.
  Se exemplet nedan:
 
-public class Human {
+	public class Human {
 	private Dog dog;   //<---- denna får aldrig något värde
 	private String name;
 	
