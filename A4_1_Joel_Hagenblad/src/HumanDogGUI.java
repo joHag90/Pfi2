@@ -17,9 +17,6 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.util.ArrayList;
 
-	
-	
-
 public class HumanDogGUI extends JFrame {
 
 	Human human;
