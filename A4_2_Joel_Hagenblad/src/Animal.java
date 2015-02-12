@@ -7,15 +7,20 @@ public abstract class Animal {
 		this.latinName = latinName;
 	}
 	
-	public abstract String getInfo(){
-		
-	}
+	public abstract String getInfo();
 	
 	public void setFriendlyName(String name){
-		
+		if (name == null){
+			name = "noname";
+		}
+		this.friendlyName = name;
 	}
 	
 	public String getFriendlyName(){
-		return friendlyName;
+		return this.friendlyName;
+	}
+	
+	public String getLatinName(){
+		return this.latinName;
 	}
 }

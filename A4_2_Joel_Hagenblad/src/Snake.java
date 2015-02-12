@@ -4,15 +4,23 @@ public class Snake extends Animal{
 	private boolean poisonous;
 	
 	public Snake(String latinName, boolean poisonous){
-		this.latinName = super.latinName;
+		super(latinName);
+		this.poisonous = poisonous;
+		super.setFriendlyName(getFriendlyName());
 	}
 	
 	public boolean isPoisonous(){
-		if (this.poisonous == true){
-			return true;
+		return poisonous;
+	}
+	
+	public String getInfo(){
+		String poison;
+		if (poisonous != true){
+			poison = "isn't";
 		} else {
-			return false;
+			poison = "is";
 		}
+		return "The snake, " + "\"" + getFriendlyName() + "\"" + ", latin: " + "\"" + getLatinName() + "\", " + poison + " poisonous.";
 	}
 	
 }
