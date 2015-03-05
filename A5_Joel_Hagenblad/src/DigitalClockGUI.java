@@ -57,11 +57,12 @@ public class DigitalClockGUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 256, 312);
 		contentPane = new JPanel();
-		contentPane.setBackground(Color.GRAY);
+		contentPane.setBackground(Color.PINK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		
 		JButton btnSetAlarm = new JButton("Set Alarm");
+		btnSetAlarm.setFont(new Font("Verdana", Font.BOLD, 12));
 		btnSetAlarm.setBounds(61, 172, 117, 29);
 		btnSetAlarm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -93,6 +94,7 @@ public class DigitalClockGUI extends JFrame {
 		contentPane.add(btnSetAlarm);
 								
 		JButton btnClearAlarm = new JButton("Clear Alarm");
+		btnClearAlarm.setFont(new Font("Verdana", Font.BOLD, 12));
 		btnClearAlarm.setBounds(61, 254, 117, 29);
 		btnClearAlarm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -106,42 +108,47 @@ public class DigitalClockGUI extends JFrame {
 		contentPane.add(btnClearAlarm);
 		
 		textFieldHour = new JTextField();
+		textFieldHour.setFont(new Font("Verdana", Font.BOLD, 12));
 		textFieldHour.setBounds(61, 127, 41, 28);
 		contentPane.add(textFieldHour);
 		textFieldHour.setColumns(10);
 		
 		textFieldMin = new JTextField();
+		textFieldMin.setFont(new Font("Verdana", Font.BOLD, 12));
 		textFieldMin.setBounds(137, 127, 41, 28);
 		contentPane.add(textFieldMin);
 		textFieldMin.setColumns(10);
 		
 		JLabel lblHours = new JLabel("Hours");
+		lblHours.setFont(new Font("Verdana", Font.BOLD, 12));
 		lblHours.setBounds(61, 156, 61, 16);
 		contentPane.add(lblHours);
 		
 		JLabel lblMinutes = new JLabel("Minutes");
+		lblMinutes.setFont(new Font("Verdana", Font.BOLD, 12));
 		lblMinutes.setBounds(134, 156, 61, 16);
 		contentPane.add(lblMinutes);
 		
 		textAlarmSet = new JTextField();
+		textAlarmSet.setFont(new Font("Verdana", Font.BOLD, 12));
 		textAlarmSet.setHorizontalAlignment(SwingConstants.CENTER);
 		textAlarmSet.setBounds(77, 213, 83, 28);
 		contentPane.add(textAlarmSet);
 		textAlarmSet.setColumns(10);
 		
 		textClock = new JTextField();
-		textClock.setForeground(Color.RED);
+		textClock.setForeground(Color.MAGENTA);
 		textClock.setEditable(false);
 		textClock.setHorizontalAlignment(SwingConstants.CENTER);
 		textClock.setBorder(null);
-		textClock.setBackground(Color.GRAY);
+		textClock.setBackground(Color.PINK);
 		textClock.setFont(new Font("Synchro LET", Font.PLAIN, 55));
 		textClock.setBounds(0, 38, 251, 55);
 		contentPane.add(textClock);
 		textClock.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBackground(Color.GRAY);
+		lblNewLabel.setBackground(Color.PINK);
 		lblNewLabel.setBounds(0, 0, 251, 290);
 		contentPane.add(lblNewLabel);
 			

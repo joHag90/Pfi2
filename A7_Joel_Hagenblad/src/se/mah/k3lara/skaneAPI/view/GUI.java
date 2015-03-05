@@ -60,7 +60,7 @@ public class GUI extends JFrame {
 		setFont(new Font("Calibri", Font.BOLD, 20));
 		setTitle("Sk\u00E5netrafiken");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 416, 301);
+		setBounds(100, 100, 449, 301);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.BLACK);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -68,100 +68,100 @@ public class GUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblUbtshallen = new JLabel("Ub\u00E5tshallen");
-		lblUbtshallen.setForeground(Color.ORANGE);
-		lblUbtshallen.setFont(new Font("Calibri", Font.BOLD, 25));
+		lblUbtshallen.setForeground(Color.YELLOW);
+		lblUbtshallen.setFont(new Font("Verdana", Font.BOLD, 25));
 		lblUbtshallen.setBackground(new Color(240, 240, 240));
-		lblUbtshallen.setBounds(132, 3, 134, 31);
+		lblUbtshallen.setBounds(123, 6, 189, 31);
 		contentPane.add(lblUbtshallen);
 		
 		JLabel lblLinje = new JLabel("Linje");
-		lblLinje.setForeground(Color.ORANGE);
-		lblLinje.setFont(new Font("Calibri", Font.BOLD, 20));
-		lblLinje.setBounds(12, 46, 49, 26);
+		lblLinje.setForeground(Color.YELLOW);
+		lblLinje.setFont(new Font("Verdana", Font.BOLD, 20));
+		lblLinje.setBounds(12, 46, 56, 26);
 		contentPane.add(lblLinje);
 		
 		JLabel lblDestination = new JLabel("Destination");
-		lblDestination.setFont(new Font("Calibri", Font.BOLD, 20));
-		lblDestination.setForeground(Color.ORANGE);
-		lblDestination.setBounds(73, 46, 106, 26);
+		lblDestination.setFont(new Font("Verdana", Font.BOLD, 20));
+		lblDestination.setForeground(Color.YELLOW);
+		lblDestination.setBounds(91, 46, 159, 26);
 		contentPane.add(lblDestination);
 		
 		JLabel lblAvgar = new JLabel("Avg\u00E5r");
-		lblAvgar.setForeground(Color.ORANGE);
-		lblAvgar.setFont(new Font("Calibri", Font.BOLD, 20));
-		lblAvgar.setBounds(301, 49, 56, 21);
+		lblAvgar.setForeground(Color.YELLOW);
+		lblAvgar.setFont(new Font("Verdana", Font.BOLD, 20));
+		lblAvgar.setBounds(337, 48, 76, 23);
 		contentPane.add(lblAvgar);
 		
 		
 		labelLinje1.setForeground(Color.WHITE);
-		labelLinje1.setFont(new Font("Calibri", Font.PLAIN, 20));
+		labelLinje1.setFont(new Font("Verdana", Font.PLAIN, 18));
 		labelLinje1.setBounds(12, 70, 84, 31);
 		contentPane.add(labelLinje1);
 		
 		
 		labelLinje2.setForeground(Color.WHITE);
-		labelLinje2.setFont(new Font("Calibri", Font.PLAIN, 20));
+		labelLinje2.setFont(new Font("Verdana", Font.PLAIN, 18));
 		labelLinje2.setBounds(12, 114, 84, 31);
 		contentPane.add(labelLinje2);
 		
 		
 		labelLinje3.setForeground(Color.WHITE);
-		labelLinje3.setFont(new Font("Calibri", Font.PLAIN, 20));
+		labelLinje3.setFont(new Font("Verdana", Font.PLAIN, 18));
 		labelLinje3.setBounds(12, 158, 84, 31);
 		contentPane.add(labelLinje3);
 		
 		
 		labelLinje4.setForeground(Color.WHITE);
-		labelLinje4.setFont(new Font("Calibri", Font.PLAIN, 20));
+		labelLinje4.setFont(new Font("Verdana", Font.PLAIN, 18));
 		labelLinje4.setBounds(12, 202, 84, 31);
 		contentPane.add(labelLinje4);
 		
 		
 		labelDes1.setForeground(Color.WHITE);
-		labelDes1.setFont(new Font("Calibri", Font.PLAIN, 20));
-		labelDes1.setBounds(73, 70, 240, 31);
+		labelDes1.setFont(new Font("Verdana", Font.PLAIN, 18));
+		labelDes1.setBounds(91, 70, 240, 31);
 		contentPane.add(labelDes1);
 		
 		
 		labelDes2.setForeground(Color.WHITE);
-		labelDes2.setFont(new Font("Calibri", Font.PLAIN, 20));
-		labelDes2.setBounds(73, 114, 240, 31);
+		labelDes2.setFont(new Font("Verdana", Font.PLAIN, 18));
+		labelDes2.setBounds(91, 114, 240, 31);
 		contentPane.add(labelDes2);
 		
 		
 		labelDes3.setForeground(Color.WHITE);
-		labelDes3.setFont(new Font("Calibri", Font.PLAIN, 20));
-		labelDes3.setBounds(73, 158, 240, 31);
+		labelDes3.setFont(new Font("Verdana", Font.PLAIN, 18));
+		labelDes3.setBounds(91, 158, 240, 31);
 		contentPane.add(labelDes3);
 		
 		
 		labelDes4.setForeground(Color.WHITE);
-		labelDes4.setFont(new Font("Calibri", Font.PLAIN, 20));
-		labelDes4.setBounds(73, 202, 240, 31);
+		labelDes4.setFont(new Font("Verdana", Font.PLAIN, 18));
+		labelDes4.setBounds(91, 202, 240, 31);
 		contentPane.add(labelDes4);
 		
 		
 		labelTime1.setForeground(Color.WHITE);
 		labelTime1.setFont(new Font("Calibri", Font.PLAIN, 20));
-		labelTime1.setBounds(301, 70, 84, 31);
+		labelTime1.setBounds(337, 71, 84, 31);
 		contentPane.add(labelTime1);
 		
 		
 		labelTime2.setForeground(Color.WHITE);
 		labelTime2.setFont(new Font("Calibri", Font.PLAIN, 20));
-		labelTime2.setBounds(301, 114, 84, 31);
+		labelTime2.setBounds(337, 115, 84, 31);
 		contentPane.add(labelTime2);
 		
 		
 		labelTime3.setForeground(Color.WHITE);
 		labelTime3.setFont(new Font("Calibri", Font.PLAIN, 20));
-		labelTime3.setBounds(301, 158, 84, 31);
+		labelTime3.setBounds(337, 159, 84, 31);
 		contentPane.add(labelTime3);
 		
 		
 		labelTime4.setForeground(Color.WHITE);
 		labelTime4.setFont(new Font("Calibri", Font.PLAIN, 20));
-		labelTime4.setBounds(301, 202, 84, 31);
+		labelTime4.setBounds(337, 203, 84, 31);
 		contentPane.add(labelTime4);
 		  
 		  	UpdateLables();
