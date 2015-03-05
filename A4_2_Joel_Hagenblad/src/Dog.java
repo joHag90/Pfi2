@@ -10,7 +10,7 @@ public class Dog extends Mammal{
 	
 	public Dog(String latinName, int gestationTime, boolean stupid, String friendlyName){
 		super(latinName, gestationTime);
-		super.setFriendlyName(friendlyName);
+		setFriendlyName(friendlyName);
 		this.stupid = stupid;
 	}
 	
